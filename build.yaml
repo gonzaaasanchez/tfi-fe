@@ -1,0 +1,18 @@
+targets:
+    $default:
+      builders:
+        json_serializable:
+          generate_for:
+            include:
+              - lib/general/domain/models/**/*  #to include subfolders
+              - lib/general/domain/models/*     #to include loose files
+        freezed:
+          generate_for:
+            include:
+              - lib/app/presentation/**/**_state.dart
+              - lib/admin/presentation/**/**_state.dart
+              - lib/general/domain/models/**/*
+              - lib/general/domain/models/*
+              - lib/general/domain/failures/**/*
+              - lib/general/domain/failures/*
+              - lib/general/domain/either/either.dart
